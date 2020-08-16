@@ -32,65 +32,148 @@
     />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./style.js"></script>
     <script src="./carousel.js"></script>
   </head>
 
   <body>
     <header>
+      <div class="menu-mobile d-block d-lg-none d-md-none">
+        <i
+          class="fa fa-bars"
+          aria-hidden="true"
+          class="icon-hamburger"
+          onclick="activeMenu()"
+        ></i>
+        <!-- <div class="backdrop">
+          Chỗ này là nền đen nè :v, có cần thì bỏ vào
+        </div> -->
+        <div class="menu">
+          <i
+            class="fas fa-times"
+            onclick="activeMenu()"
+            aria-hidden="true"
+            class="icon-hamburger"
+          ></i>
+          <ul>
+            <li><a href="#">Menu 1</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Menu 1</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Menu 1</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Menu 1</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="topbar container">
         <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <div class="logo">
+          <div
+            class="col-12 col-lg-4 col-md-4 d-flex justify-content-center header"
+          >
+            <div class="header-left">
               <img
-                src=""
+                class="logo-img"
+                src="https://static1.squarespace.com/static/55174098e4b01b711315abe8/597df0b1d7bdce037b2cf99d/59ca9e58e3df2804c6da2eb4/1506454420482/Allison-Meadows.png?format=1500w"
                 alt=""
                 srcset=""
-                style="height: 80px; width: 100px; background: blue;"
               />
+            </div>
+          </div>
+          <div
+            class="col-8 d-none d-lg-block d-md-block d-flex-column text-right my-auto"
+          >
+            <div class="row">
+              <div class="col">
+                <a href="#" class="mr-3">
+                  <i
+                    class="fas fa-map-marker-alt"
+                    aria-hidden="true"
+                    data-selected="true"
+                    data-label-id="0"
+                  ></i>
+                  144 Nguyễn Thái Bình, p. Nguyễn Thái Bình, Q.1, HCM</a
+                >
+                <a href="#">
+                  <i
+                    class="far fa-envelope"
+                    aria-hidden="true"
+                    data-selected="true"
+                    data-label-id="0"
+                  ></i>
+                  hotro@b-boy.com</a
+                >
+              </div>
+            </div>
+            <div class="row d-sm-none d-xs-none">
+              <div class="col">
+                <a href="#" class="mr-3">
+                  <i
+                    class="fas fa-phone-alt"
+                    aria-hidden="true"
+                    data-selected="true"
+                    data-label-id="0"
+                  ></i
+                  >037 333 5217</a
+                >
+                <a href="#">
+                  <i
+                    class="fas fa-phone-alt"
+                    aria-hidden="true"
+                    data-selected="true"
+                    data-label-id="0"
+                  ></i
+                  >037 333 52175217</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="main-menu container-fluid p-0">
+      <div class="main-menu container-fluid p-0 d-none d-lg-block d-md-block">
         <div class="row">
           <div class="col-12">
-            <nav
+            <ul
               class="nav d-flex justify-content-center align-items-center"
               style="background: aquamarine;"
             >
-              <a class="nav-link active" href="#">Trang chủ</a>
-              <a class="nav-link" href="#">Câu chuyện thương hiệu</a>
-              <a
-                class="nav-link hover-menu"
-                href="#pageSubmenu"
-                data-toggle="collapse"
-                aria-expanded="false"
-                >Menu
-              </a>
-              <ul class="list-unstyled collapse" id="pageSubmenu">
-                <li>
-                  <a class="nav-link" href="#">
-                    Menu 1
-                  </a>
-                </li>
-                <li>
-                  <a class="nav-link" href="#">
-                    Menu 2
-                  </a>
-                </li>
-              </ul>
-              <a class="nav-link" href="#">Tin tức - Tuyển dụng</a>
-              <a class="nav-link" href="#">Hệ thống chi nhánh</a>
-            </nav>
+              <li><a class="nav-link" href="/index.html">Trang chủ</a></li>
+              <li>
+                <a class="nav-link" href="/story.html"
+                  >Câu chuyện thương hiệu</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-link hover-menu"
+                  href="#"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  >Menu
+                </a>
+                <ul class="submenu">
+                  <li>
+                    <a class="nav-link" href="#">
+                      Menu 1
+                    </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#">
+                      Menu 2
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="nav-link" href="#">Tin tức - Tuyển dụng</a></li>
+              <li><a class="nav-link" href="#">Hệ thống chi nhánh</a></li>
+            </ul>
           </div>
         </div>
       </div>
     </header>
-    <script>
-      $(".hover-menu").hover(function () {
-        $(".hover-menu").trigger("click");
-      });
-    </script>
 
     <section id="slide">
       <div class="container">
@@ -450,7 +533,7 @@
           <div class="col-12 col-lg-6">
             <div class="row">
               <div class="col-12">
-                <h3>Yogurt</h3>
+                <h3>B-BOY Sữa chua trân châu</h3>
               </div>
             </div>
             <div class="row">
@@ -466,10 +549,7 @@
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                nisi ut aliquip ex ea commodo consequat."
               </div>
             </div>
             <div class="row">
@@ -485,10 +565,20 @@
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                nisi ut aliquip ex ea commodo consequat."
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <i
+                  class="far fa-envelope"
+                  aria-hidden="true"
+                  data-selected="true"
+                  data-label-id="0"
+                ></i>
+              </div>
+              <div class="col-11">
+                test@gmail.com
               </div>
             </div>
           </div>
@@ -524,36 +614,6 @@
         </div>
       </div>
     </footer>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="container">
-          <div class="row">
-            <div class="header col-md-12">
-              <div class="header-left">
-                <img
-                  class="logo-img"
-                  src="https://static1.squarespace.com/static/55174098e4b01b711315abe8/597df0b1d7bdce037b2cf99d/59ca9e58e3df2804c6da2eb4/1506454420482/Allison-Meadows.png?format=1500w"
-                  alt=""
-                />
-              </div>
-              <div class="header-right">
-                <div class="address">
-                  <a href="#"
-                    >144 Nguyễn Thái Bình, p. Nguyễn Thái BÌnh, Q.1, HCM</a
-                  >
-                  <a href="#">hotro@b-boy.com</a>
-                </div>
-                <div class="phone">
-                  <a href="#">037 333 5217</a>
-                  <a href="#">037 333 52175217</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- nav bar -->
     <!-- nav bar mobile -->
@@ -623,5 +683,26 @@
     >
       <span class="screen-reader-text">Di chuyển lên đầu trang</span>
     </a>
+    <script>
+      $(function () {
+        setNavigation();
+      });
+
+      function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $(".main-menu a").each(function () {
+          const href = $(this).attr("href");
+          console.log("href", path.substring(0, href.length));
+          if (href && path.substring(0, href.length) === href) {
+            $(this).closest("li").addClass("active");
+          }
+        });
+      }
+    </script>
   </body>
+
+  <a href="#" class="scroll-top" onclick="scrollToTop()">TO TOP</a>
 </html>

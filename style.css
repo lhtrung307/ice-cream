@@ -52,6 +52,7 @@ body {
   border: 2px solid blue;
   border-radius: 15px;
 }
+
 .image-box img {
   max-width: 100%;
   transition: all 0.3s;
@@ -73,6 +74,7 @@ body {
 .thumb-img-container .image-detail {
   text-align: center;
 }
+
 .product-intro {
   background-color: grey;
   height: 250px;
@@ -96,6 +98,7 @@ body {
   background-color: blue;
   margin: 0 auto;
 }
+
 .product-intro .product-intro-content .intro-detail {
   padding-top: 16px;
   text-align: center;
@@ -118,36 +121,6 @@ body {
   transform: scale(1.1);
 } */
 
-footer {
-  height: 300px;
-  background-color: yellow;
-}
-
-.carousel-custom .carousel-item img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 450px;
-}
-.carousel-custom .carousel-item {
-  height: 450px;
-}
-
-.news {
-  max-height: 600px;
-}
-
-.generate-back-to-top,
-.generate-back-to-top:visited {
-  background: #36c5f3;
-  border-radius: 50%;
-}
-
-/* Menu tabs */
-.nav-tabs .nav-link.active {
-  border-color: #fff;
-}
-
 .nav-tabs {
   border: unset;
 }
@@ -158,4 +131,49 @@ footer {
 
 .nav-tabs .nav-link:hover {
   border-color: #fff;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background: white;
+  box-shadow: 1px 1px 5px gainsboro;
+  z-index: 1;
+}
+
+.submenu>li {
+  list-style: none;
+  width: 150px;
+}
+
+.nav>li:hover .submenu {
+  display: block;
+}
+
+.nav>li {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Menu Hamburger */
+.menu-mobile .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background: bisque;
+  z-index: 10;
+  transition: 0.3s ease-in;
+  transform: translateX(-100%);
+}
+
+.menu-mobile .menu.active {
+  transform: translateX(0);
+  transition: 0.3s ease-out;
+}
+
+.main-menu li.active {
+  color: red
 }
