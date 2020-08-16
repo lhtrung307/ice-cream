@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice cream</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./carousel.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="topbar container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <div class="logo">
+              <img
+                src=""
+                alt=""
+                srcset=""
+                style="height: 80px; width: 100px; background: blue;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-menu container-fluid p-0">
+        <div class="row">
+          <div class="col-12">
+            <nav
+              class="nav d-flex justify-content-center align-items-center"
+              style="background: aquamarine;"
+            >
+              <a class="nav-link active" href="#">Trang chủ</a>
+              <a class="nav-link" href="#">Câu chuyện thương hiệu</a>
+              <a
+                class="nav-link hover-menu"
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                >Menu
+              </a>
+              <ul class="list-unstyled collapse" id="pageSubmenu">
+                <li>
+                  <a class="nav-link" href="#">
+                    Menu 1
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#">
+                    Menu 2
+                  </a>
+                </li>
+              </ul>
+              <a class="nav-link" href="#">Tin tức - Tuyển dụng</a>
+              <a class="nav-link" href="#">Hệ thống chi nhánh</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      $(".hover-menu").hover(function () {
+        $(".hover-menu").trigger("click");
+      });
+    </script>
+
+    <section id="slide">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- carousel -->
+            <div
+              id="carouselExampleControls"
+              class="carousel slide mb-3 carousel-custom"
+              data-ride="carousel"
+            >
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <script>
+              const topCarousel = document.querySelector(
+                "#carouselExampleControls"
+              );
+              createCarousel(topCarousel);
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container thumb-img-container">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="img-content">
+            <div class="image-box">
+              <a href="#"
+                ><img src="https://bit.ly/3aq7NBb" class="d-block" alt="..."
+              /></a>
+            </div>
+            <div class="image-detail">
+              <a href="#">Sữa chua của Neca</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="img-content">
+            <div class="image-box">
+              <a href="#"
+                ><img src="https://bit.ly/3aq7NBb" class="d-block" alt="..."
+              /></a>
+            </div>
+            <div class="image-detail">
+              <a href="#">Hình ảnh cửa hàng của Neca</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="img-content">
+            <div class="image-box">
+              <a href="#"
+                ><img src="https://bit.ly/3aq7NBb" class="d-block" alt="..."
+              /></a>
+            </div>
+            <div class="image-detail">
+              <a href="#">Liên hệ ship hàng</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid product-intro">
+      <div class="row">
+        <div class="container product-intro-content">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <h2 class="intro-title">b-boy sữa chua trân châu</h2>
+              <div class="intro-border"></div>
+
+              <p class="intro-detail">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                dignissimos perferendis odio ea officiis ipsa molestias omnis
+                dicta animi tempora dolor ab, delectus in fuga, fugiat iusto
+                ipsam voluptates consequuntur.
+              </p>
+              <div class="intro-border"></div>
+            </div>
+            <div class="col-lg-4">
+              <img
+                class="intro-img img-fluid"
+                src="https://bit.ly/3aq7NBb"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <h3>
+              Menu
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <ul
+              class="nav nav-tabs d-flex justify-content-center align-items-center"
+              id="myTab"
+              role="tablist"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="home-tab"
+                  data-toggle="tab"
+                  href="#home"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  >Tất cả</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="profile-tab"
+                  data-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                  >Sữa chua kem</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="contact-tab"
+                  data-toggle="tab"
+                  href="#contact"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                  >Sữa chua uống</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="contact-tab"
+                  data-toggle="tab"
+                  href="#contact"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                  >Khác</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <!--Carousel Wrapper-->
+                      <div
+                        id="multi-item-example"
+                        class="carousel slide carousel-multi-item my-5"
+                        data-ride="carousel"
+                      >
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                          <li
+                            data-target="#multi-item-example"
+                            data-slide-to="0"
+                            class="active"
+                          ></li>
+                          <li
+                            data-target="#multi-item-example"
+                            data-slide-to="1"
+                          ></li>
+                          <li
+                            data-target="#multi-item-example"
+                            data-slide-to="2"
+                          ></li>
+                        </ol>
+                        <!--/.Indicators-->
+                      </div>
+                      <script>
+                        const multiItemsCarousel = document.querySelector(
+                          ".carousel-multi-item"
+                        );
+                        createMultiItemsCarousel(multiItemsCarousel);
+                      </script>
+                      <!--/.Carousel Wrapper-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <!--Carousel Wrapper-->
+                      <div
+                        id="multi-item-profile"
+                        class="carousel slide carousel-multi-item my-5"
+                        data-ride="carousel"
+                      >
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                          <li
+                            data-target="#multi-item-profile"
+                            data-slide-to="0"
+                            class="active"
+                          ></li>
+                          <li
+                            data-target="#multi-item-profile"
+                            data-slide-to="1"
+                          ></li>
+                          <li
+                            data-target="#multi-item-profile"
+                            data-slide-to="2"
+                          ></li>
+                        </ol>
+                        <!--/.Indicators-->
+                      </div>
+                      <script>
+                        const multiItemsCarouselProfile = document.querySelector(
+                          "#multi-item-profile"
+                        );
+                        createMultiItemsCarousel(multiItemsCarouselProfile);
+                      </script>
+                      <!--/.Carousel Wrapper-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="contact"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <!--Carousel Wrapper-->
+                      <div
+                        id="multi-item-contact"
+                        class="carousel slide carousel-multi-item my-5"
+                        data-ride="carousel"
+                      >
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                          <li
+                            data-target="#multi-item-contact"
+                            data-slide-to="0"
+                            class="active"
+                          ></li>
+                          <li
+                            data-target="#multi-item-contact"
+                            data-slide-to="1"
+                          ></li>
+                          <li
+                            data-target="#multi-item-contact"
+                            data-slide-to="2"
+                          ></li>
+                        </ol>
+                        <!--/.Indicators-->
+                      </div>
+                      <script>
+                        const multiItemsCarouselContact = document.querySelector(
+                          "#multi-item-contact"
+                        );
+                        createMultiItemsCarousel(multiItemsCarouselContact);
+                      </script>
+                      <!--/.Carousel Wrapper-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <h3>Tin Tức</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-2">
+            <img src="https://via.placeholder.com/150" class="" alt="..." />
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <div class="col-12 col-lg-6 mb-2">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-6 mb-2">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <h3>Yogurt</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <i
+                  class="fas fa-map-marker-alt"
+                  aria-hidden="true"
+                  data-selected="true"
+                  data-label-id="0"
+                ></i>
+              </div>
+              <div class="col-11">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <i
+                  class="fas fa-phone-alt"
+                  aria-hidden="true"
+                  data-selected="true"
+                  data-label-id="0"
+                ></i>
+              </div>
+              <div class="col-11">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <h3>Mạng xã hội</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <div class="text-center">
+                  <i class="fab fa-twitter"></i>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="text-center">
+                  <i class="fab fa-facebook"></i>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="text-center">
+                  <i class="fab fa-instagram"></i>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="text-center">
+                  <i class="fab fa-pinterest"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="header col-md-12">
+              <div class="header-left">
+                <img
+                  class="logo-img"
+                  src="https://static1.squarespace.com/static/55174098e4b01b711315abe8/597df0b1d7bdce037b2cf99d/59ca9e58e3df2804c6da2eb4/1506454420482/Allison-Meadows.png?format=1500w"
+                  alt=""
+                />
+              </div>
+              <div class="header-right">
+                <div class="address">
+                  <a href="#"
+                    >144 Nguyễn Thái Bình, p. Nguyễn Thái BÌnh, Q.1, HCM</a
+                  >
+                  <a href="#">hotro@b-boy.com</a>
+                </div>
+                <div class="phone">
+                  <a href="#">037 333 5217</a>
+                  <a href="#">037 333 52175217</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- nav bar -->
+    <!-- nav bar mobile -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 main-menu"></ul>
+      </div>
+    </nav>
+
+    <script>
+      const menus = [
+        {
+          name: "Trang chủ",
+          link: "#"
+        },
+        {
+          name: "Câu chuyện thương hiệu",
+          link: "#"
+        },
+        {
+          name: "Menu",
+          link: "#"
+        },
+        {
+          name: "Tin tức - Tuyển dụng",
+          link: "#"
+        },
+        {
+          name: "Hệ thống chi nhánh",
+          link: "#"
+        }
+      ];
+      const mainMenu = document.querySelector(".main-menu");
+      menus.map((menu) => {
+        const node = document.createElement("LI");
+        node.className = "nav-item active";
+        const menuLink = document.createElement("a");
+        menuLink.className = "nav-link";
+        menuLink.href = menu.link;
+        menuLink.innerText = menu.name;
+        node.appendChild(menuLink);
+        mainMenu.appendChild(node);
+      });
+    </script> -->
+
+    <a
+      title="Di chuyển lên đầu trang"
+      rel="nofollow"
+      href="#"
+      class="generate-back-to-top"
+      style="opacity: 1; visibility: visible;"
+      data-scroll-speed="400"
+      data-start-scroll="300"
+    >
+      <span class="screen-reader-text">Di chuyển lên đầu trang</span>
+    </a>
+  </body>
+</html>
