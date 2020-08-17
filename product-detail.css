@@ -9,7 +9,6 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: white;
-  max-width: 100%;
 }
 h1,
 h2,
@@ -20,51 +19,78 @@ h3 {
 a:hover {
   text-decoration: none;
 }
-
-/*HEADER*/
 .header {
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
 }
 
 .header .header-left .logo-img {
   width: 60px;
   height: 60px;
+  border: 1px solid grey;
+  border-radius: 50%;
 }
 
 .header .header-right {
   text-align: right;
 }
-.header-right-contact {
-  margin-bottom: 24px;
-}
-.header-address {
-  margin-right: 16px;
-}
-.header-email {
-  display: inline-block;
-}
-.phone-header {
-  font-size: 18px;
-}
-/*END HEADER*/
 
-/*NAVBAR*/
-.nav .nav-link {
-  color: white;
+.header-right a {
+  color: black;
+}
+
+.header-right .address a:not(:last-child) {
+  margin-right: 24px;
+}
+
+.product-intro {
+  background-color: #f7f7f7;
+}
+
+.product-intro .product-intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.product-intro .product-intro-content .intro-title {
   text-transform: uppercase;
-  font-size: 18px;
-  transition: 0.3s;
-}
-.nav .nav-link:hover {
-  color: #c8fbfa;
-  cursor: pointer;
+  text-align: center;
+  font-family: "Arima Madurai", sans-serif;
 }
 
-.submenu {
-  background-color: #7bced4;
+.product-intro .product-intro-content .intro-border {
+  width: 300px;
+  height: 2px;
+  background-color: rgb(0, 238, 255);
+  margin: 0 auto;
+}
+.product-intro .product-intro-content .intro-detail {
+  padding: 16px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .intro-img {
+    display: none;
+  }
+}
+
+/*TIN TUC*/
+.news .news-img {
+  width: 100%;
+  height: auto;
+}
+
+.main-nav li a {
+  color: white;
+}
+
+.nav li a:hover {
+  color: blue;
 }
 
 .nav-tabs {
@@ -83,7 +109,7 @@ a:hover {
   display: none;
   position: absolute;
   left: 0;
-  background: #7bced4;
+  background: aquamarine;
   box-shadow: 1px 1px 5px gainsboro;
   z-index: 1;
 }
@@ -91,6 +117,9 @@ a:hover {
 .submenu > li {
   list-style: none;
   width: 150px;
+}
+.submenu > li:hover {
+  background-color: #f7f7f7;
 }
 
 .nav > li:hover .submenu {
@@ -127,81 +156,6 @@ a:hover {
 .main-menu li.active {
   color: red;
 }
-/*END NAVBAR*/
-
-/*3 ITEMS*/
-
-.image-detail a {
-  color: #6d6d6d;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-}
-
-/*PRODUCT INTRO*/
-.product-intro {
-  background-color: #f7f7f7;
-  margin: 30px 0;
-}
-
-.product-intro .product-intro-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 0;
-}
-
-.product-intro .product-intro-content .intro-title {
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Arima Madurai", sans-serif;
-}
-
-.product-intro .product-intro-content .intro-border {
-  width: 300px;
-  height: 2px;
-  margin: 0 auto;
-}
-.product-intro .product-intro-content .intro-detail {
-  padding: 16px;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  line-height: 30px;
-}
-@media (max-width: 768px) {
-  .intro-img {
-    display: none;
-  }
-}
-/*END PRODUCT INTRO*/
-
-/*MENU TABS*/
-.menu-tabs .nav-item a {
-  color: #6d6d6d;
-}
-.menu-tabs .nav-item a {
-  transition: unset;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.menu-tabs .nav-item a:hover {
-  color: inherit;
-}
-
-.menu-tab .nav-item,
-.nav-link.active {
-  border: unset;
-}
-/*TIN TUC*/
-.news .news-img {
-  width: 100%;
-  height: auto;
-}
-
-.main-nav li a {
-  color: white;
-}
 
 /*Footer*/
 .icon-container {
@@ -223,9 +177,9 @@ a:hover {
 
 /*Thumb image*/
 .thumb-img-container .image-box {
-  width: 326px;
-  height: 214px;
-  border: 5px solid #0abbb5;
+  width: 348px;
+  height: 328px;
+  border: 2px solid rgb(0, 255, 242);
   border-radius: 15px;
 }
 
@@ -238,6 +192,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   background-color: white;
+  border: 1px solid rgb(0, 255, 242);
   width: 262px;
   height: 262px;
 }
@@ -253,6 +208,10 @@ a:hover {
 
 .image-detail {
   text-align: center;
+}
+/*Header*/
+.phone-header a:not(:last-child) {
+  margin-right: 16px;
 }
 
 @media (max-width: 768px) {
@@ -290,16 +249,25 @@ a:hover {
   max-height: 200px;
 }
 
-@media (max-width: 768px) {
-  .header-right-contact {
-    margin-bottom: 8px;
-  }
-  .header-address {
-    margin-right: 0;
-    font-size: 8px;
-  }
+/*PRODUCT DETAIL*/
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 24px;
+}
 
-  .header-email {
-    display: none;
-  }
+.product-title {
+  font-family: "Arima Madurai", sans-serif;
+  padding: 20px 0;
+}
+
+.select-btn {
+  font-family: "Arima Madurai", sans-serif;
+  display: inline-block;
+  max-width: 150px;
+  padding: 8px 16px;
+  border: unset;
+  background-color: blue;
+  color: white;
 }

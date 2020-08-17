@@ -2,7 +2,7 @@ function createCarousel(topCarousel) {
   const carouselItems = [
     "https://bit.ly/3aq7NBb",
     "https://bit.ly/3aq7NBb",
-    "https://bit.ly/3aq7NBb"
+    "https://bit.ly/3aq7NBb",
   ];
   const carouselInner = document.createElement("div");
   carouselInner.className = "carousel-inner";
@@ -14,7 +14,7 @@ function createCarousel(topCarousel) {
     }
     const image = document.createElement("img");
     image.src = element;
-    image.className = "img-fluid";
+    image.className = "img-fluid w-100";
     carousel.appendChild(image);
     carouselInner.appendChild(carousel);
   });
@@ -25,46 +25,142 @@ function createMultiItemsCarousel(multiItemsCarousel) {
   const carouselItems = [
     [
       [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150"
+        {
+          image: "https://bit.ly/3aq7NBb",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
       ],
       [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150"
-      ]
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+      ],
     ],
     [
       [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150"
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
       ],
       [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150"
-      ]
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+      ],
     ],
     [
       [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150"
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
       ],
       [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150"
-      ]
-    ]
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150",
+          name: "Purple Rice Yogurt",
+          link: "#",
+        },
+      ],
+    ],
   ];
   const carouselInner = document.createElement("div");
   carouselInner.className = "carousel-inner";
@@ -80,12 +176,25 @@ function createMultiItemsCarousel(multiItemsCarousel) {
     carouselItem.forEach((element) => {
       element.map((ele) => {
         const innerCol = document.createElement("div");
-        innerCol.className = "col-6 col-lg-3 my-3 mb-2";
+        innerCol.className = "col-12 col-md-6 col-lg-3 col-xl-3 my-3 mb-2";
+        const imageWrapper = document.createElement("div");
+        imageWrapper.className = "image-box mb-2";
         const image = document.createElement("img");
-        image.src = ele;
-        image.className = "img-fluid";
-        innerCol.appendChild(image);
+        const link = document.createElement("a");
+        imageWrapper.appendChild(link);
+        link.href = ele.link;
+        image.src = ele.image;
+        image.className = "img-fluid w-100";
+        link.appendChild(image);
+        innerCol.appendChild(imageWrapper);
         row.appendChild(innerCol);
+        const title = document.createElement("div");
+        title.className = "image-detail";
+        const titleLink = document.createElement("a");
+        titleLink.href = ele.link;
+        titleLink.text = ele.name;
+        title.appendChild(titleLink);
+        innerCol.appendChild(title);
       });
     });
     container.appendChild(row);
