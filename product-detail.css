@@ -249,14 +249,25 @@ a:hover {
   max-height: 200px;
 }
 
-.round-indicators {
-  bottom: -25px;
+/*PRODUCT DETAIL*/
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 24px;
 }
 
-.round-indicators li {
-  width: 10px;
-  margin-left: 1.5rem;
-  height: 10px;
-  border-radius: 50%;
-  border: 3px solid black;
+.product-title {
+  font-family: "Arima Madurai", sans-serif;
+  padding: 20px 0;
+}
+
+.select-btn {
+  font-family: "Arima Madurai", sans-serif;
+  display: inline-block;
+  max-width: 150px;
+  padding: 8px 16px;
+  border: unset;
+  background-color: blue;
+  color: white;
 }
