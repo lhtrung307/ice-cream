@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./product-detail.css" />
     <script src="./style.js"></script>
     <script src="./carousel.js"></script>
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -108,6 +109,7 @@
                   href="https://www.google.com/maps/place/144+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Ph%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7680175,106.6981547,21z/data=!4m5!3m4!1s0x31752f3fdd1f40ab:0xaa77c41df7fb8ded!8m2!3d10.768064!4d106.698237"
                   class="mr-3"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i
                     class="fas fa-map-marker-alt"
@@ -274,7 +276,7 @@
                 <button class="select-btn mt-3 mb-3">
                   <i class="fab fa-facebook-messenger"></i> Mua ngay
                 </button>
-                <span style="pb-3"
+                <span class="pb-3"
                   >Đặt hàng nhanh, gọi số: <b>037 333 5217</b></span
                 >
               </div>
@@ -297,25 +299,25 @@
           <div class="col-12 p-0">
             <!--Carousel Wrapper-->
             <div
-              id="multi-item-example"
+              id="multi-item-all"
               class="carousel slide carousel-multi-item mb-5"
               data-ride="carousel"
             >
               <!--Indicators-->
               <ol class="carousel-indicators round-indicators">
                 <li
-                  data-target="#multi-item-example"
+                  data-target="#multi-item-all"
                   data-slide-to="0"
                   class="active"
                 ></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-                <li data-target="#multi-item-example" data-slide-to="2"></li>
+                <li data-target="#multi-item-all" data-slide-to="1"></li>
+                <li data-target="#multi-item-all" data-slide-to="2"></li>
               </ol>
               <!--/.Indicators-->
             </div>
             <script>
               const multiItemsCarousel = document.querySelector(
-                ".carousel-multi-item"
+                "#multi-item-all"
               );
               createMultiItemsCarousel(multiItemsCarousel);
             </script>
