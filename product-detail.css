@@ -9,6 +9,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: white;
+  max-width: 100%;
 }
 h1,
 h2,
@@ -19,78 +20,51 @@ h3 {
 a:hover {
   text-decoration: none;
 }
+
+/*HEADER*/
 .header {
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
 }
 
 .header .header-left .logo-img {
   width: 60px;
   height: 60px;
-  border: 1px solid grey;
-  border-radius: 50%;
 }
 
 .header .header-right {
   text-align: right;
 }
+.header-right-contact {
+  margin-bottom: 24px;
+}
+.header-address {
+  margin-right: 16px;
+}
+.header-email {
+  display: inline-block;
+}
+.phone-header {
+  font-size: 18px;
+}
+/*END HEADER*/
 
-.header-right a {
-  color: black;
-}
-
-.header-right .address a:not(:last-child) {
-  margin-right: 24px;
-}
-
-.product-intro {
-  background-color: #f7f7f7;
-}
-
-.product-intro .product-intro-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 0;
-}
-
-.product-intro .product-intro-content .intro-title {
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Arima Madurai", sans-serif;
-}
-
-.product-intro .product-intro-content .intro-border {
-  width: 300px;
-  height: 2px;
-  background-color: rgb(0, 238, 255);
-  margin: 0 auto;
-}
-.product-intro .product-intro-content .intro-detail {
-  padding: 16px;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  .intro-img {
-    display: none;
-  }
-}
-
-/*TIN TUC*/
-.news .news-img {
-  width: 100%;
-  height: auto;
-}
-
-.main-nav li a {
+/*NAVBAR*/
+.nav .nav-link {
   color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.nav .nav-link:hover {
+  color: #c8fbfa;
+  cursor: pointer;
 }
 
-.nav li a:hover {
-  color: blue;
+.submenu {
+  background-color: #7bced4;
 }
 
 .nav-tabs {
@@ -109,7 +83,7 @@ a:hover {
   display: none;
   position: absolute;
   left: 0;
-  background: aquamarine;
+  background: #7bced4;
   box-shadow: 1px 1px 5px gainsboro;
   z-index: 1;
 }
@@ -117,9 +91,6 @@ a:hover {
 .submenu > li {
   list-style: none;
   width: 150px;
-}
-.submenu > li:hover {
-  background-color: #f7f7f7;
 }
 
 .nav > li:hover .submenu {
@@ -156,30 +127,185 @@ a:hover {
 .main-menu li.active {
   color: red;
 }
+/*END NAVBAR*/
 
-/*Footer*/
-.icon-container {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+/*3 ITEMS*/
+
+.image-detail a {
+  color: #6d6d6d;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*PRODUCT INTRO*/
+.product-intro {
+  background-color: #f7f7f7;
+  margin: 30px 0;
+}
+
+.product-intro .product-intro-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #a8a6a6;
-  margin-right: 16px;
+  padding: 16px 0;
+}
+
+.product-intro .product-intro-content .intro-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Arima Madurai", sans-serif;
+}
+
+.product-intro .product-intro-content .intro-border {
+  width: 300px;
+  height: 2px;
+  margin: 0 auto;
+}
+.product-intro .product-intro-content .intro-detail {
+  padding: 16px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+@media (max-width: 768px) {
+  .intro-img {
+    display: none;
+  }
+}
+/*END PRODUCT INTRO*/
+
+/*MENU TABS*/
+.menu-tabs {
+  justify-content: center;
+}
+.menu-tabs .nav-item a {
+  color: #6d6d6d;
+}
+.menu-tabs .nav-item a {
+  transition: unset;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.menu-tabs .nav-item a:hover {
+  color: inherit;
+}
+
+.menu-tab .nav-item,
+.nav-link.active {
+  border: unset;
+}
+/*TIN TUC*/
+.news .news-img {
+  width: 100%;
+  height: auto;
+}
+
+.main-nav li a {
+  color: white;
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.wrapper ul {
+  margin-top: 20px;
+  list-style: none;
+  width: 340px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.wrapper ul li {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #d8e2dc;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px 
+to align it properly */
+.wrapper ul li .fab {
+  color: #d8e2dc;
+  /* margin-top: 20px; */
+  transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.wrapper ul li:hover.facebook {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapper ul li:hover.twitter {
+  border: 5px solid #00aced;
+  box-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-twitter {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapper ul li:hover.instagram {
+  border: 5px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-instagram {
+  color: #bc2a8d;
+  text-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+/* google */
+.wrapper ul li:hover.pinterest {
+  border: 5px solid #dd4b39;
+  box-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-pinterest {
+  color: #dd4b39;
+  text-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 768px) {
-  .icon-container {
+  .wrapper {
     display: none;
   }
 }
 
 /*Thumb image*/
 .thumb-img-container .image-box {
-  width: 348px;
-  height: 328px;
-  border: 2px solid rgb(0, 255, 242);
+  width: 326px;
+  height: 214px;
+  border: 5px solid #0abbb5;
   border-radius: 15px;
 }
 
@@ -192,7 +318,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border: 1px solid rgb(0, 255, 242);
   width: 262px;
   height: 262px;
 }
@@ -209,10 +334,6 @@ a:hover {
 .image-detail {
   text-align: center;
 }
-/*Header*/
-.phone-header a:not(:last-child) {
-  margin-right: 16px;
-}
 
 @media (max-width: 768px) {
   .phone-header {
@@ -226,6 +347,10 @@ a:hover {
 
 .news-content {
   height: 400px;
+}
+
+.new-content .new-content-left {
+  padding-right: 4px;
 }
 
 .news-content img {
@@ -249,6 +374,49 @@ a:hover {
   max-height: 200px;
 }
 
+.round-indicators li {
+  background-color: black;
+  border: none !important;
+}
+
+@media (max-width: 768px) {
+  .header-right-contact {
+    margin-bottom: 8px;
+  }
+  .header-address {
+    margin-right: 0;
+    font-size: 8px;
+  }
+
+  .header-email {
+    display: none;
+  }
+
+  .news-content {
+    height: auto;
+  }
+
+  .new-content .new-content-left {
+    padding-right: 0;
+  }
+
+  .menu-tabs {
+    justify-content: flex-start;
+  }
+}
+
+.round-indicators {
+  bottom: -25px;
+}
+
+.round-indicators li {
+  width: 10px;
+  margin-left: 1.5rem;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
 /*PRODUCT DETAIL*/
 .detail-content {
   display: flex;
@@ -268,6 +436,10 @@ a:hover {
   max-width: 150px;
   padding: 8px 16px;
   border: unset;
-  background-color: blue;
+  background-color: #0084ff;
   color: white;
+}
+
+.detail-content .product-detail {
+  font-family: "Open Sans", sans-serif;
 }
