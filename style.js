@@ -32,3 +32,27 @@ function setNavigation() {
     }
   });
 }
+
+// .carousel-indicators
+$(document).ready(function () {
+  const listCarousel = [
+    "#multi-item-all",
+    "#multi-item-profile",
+    "#multi-item-drink",
+    "#multi-item-other",
+  ];
+  listCarousel.forEach((item) => {
+    $(item)
+      .find("li")
+      .click(function () {
+        if ($(item + " li.active") && $(item + " li.active").length > 0) {
+          $(item + " li.active")[0].classList.toggle("active");
+          $(item + " .carousel-item.active")[0].classList.toggle("active");
+        }
+        $(this)[0].classList.toggle("active");
+        $(item + " .carousel-item")[$(this).data("slide-to")].classList.toggle(
+          "active"
+        );
+      });
+  });
+});

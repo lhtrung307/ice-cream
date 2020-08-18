@@ -204,5 +204,5 @@ function createMultiItemsCarousel(multiItemsCarousel) {
     }
     carouselInner.appendChild(carousel);
   });
-  multiItemsCarousel.appendChild(carouselInner);
+  multiItemsCarousel.insertBefore(carouselInner, multiItemsCarousel.firstChild);
 }
