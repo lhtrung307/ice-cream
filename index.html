@@ -11,6 +11,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -28,7 +29,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="header-sticky">
     <div class="topbar container">
       <div class="row">
         <div class="col-4 col-lg-4 col-md-4 d-flex justify-content-center header">
@@ -40,21 +41,28 @@
                 <i class="fas fa-times" onclick="activeMenu()" aria-hidden="true" class="icon-hamburger"
                   style="color: white;"></i>
               </div>
-              <ul>
+              <ul class="text-center">
                 <li>
-                  <a class="nav-link text-center" href="/index.html">Trang chủ</a>
+                  <a class="nav-link" href="/index.html">Trang chủ</a>
                 </li>
                 <li>
-                  <a class="nav-link text-center" href="/story.html">Câu chuyện thương hiệu</a>
-                </li>
-                <li><a class="nav-link text-center" href="#">Menu</a></li>
-                <li><a class="nav-link text-center" href="#">Menu 1</a></li>
-                <li><a class="nav-link text-center" href="#">Menu 2</a></li>
-                <li>
-                  <a class="nav-link text-center" href="#">Tin tức - Tuyển dụng</a>
+                  <a class="nav-link" href="/story.html">Câu chuyện thương hiệu</a>
                 </li>
                 <li>
-                  <a class="nav-link text-center" href="#">Hệ thống chi nhánh</a>
+                  <a class="nav-link drop-menu" href="#">
+                    Menu
+                    <i class="fa fa-chevron-down ml-3" aria-hidden="true"></i>
+                  </a>
+                  <div class="drop-menu-mobile" style="display: none">
+                    <a class="nav-link" href="#">Menu 1</a>
+                    <a class="nav-link" href="#">Menu 2</a>
+                  </div>
+                </li>
+                <li>
+                  <a class="nav-link" href="#">Tin tức - Tuyển dụng</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#">Hệ thống chi nhánh</a>
                 </li>
               </ul>
             </div>
@@ -66,8 +74,8 @@
           </div>
         </div>
         <div class="col-8 text-right mt-2 mb-2">
-          <div class="row">
-            <div class="header-right-contact col-12 d-lg-block" style="font-size: 12px; font-weight: bold;">
+          <div class="topbar-content">
+            <div class="header-right-contact d-lg-block" style="font-size: 12px; font-weight: bold;">
               <a href="https://www.google.com/maps/place/144+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Ph%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7680175,106.6981547,21z/data=!4m5!3m4!1s0x31752f3fdd1f40ab:0xaa77c41df7fb8ded!8m2!3d10.768064!4d106.698237"
                 target="_blank" style="color: #497697;" class="header-address" rel="noopener noreferrer">
                 <i class="fas fa-map-marker-alt" aria-hidden="true" data-selected="true" data-label-id="0"></i>
@@ -76,7 +84,7 @@
                 <i class="far fa-envelope" aria-hidden="true" data-selected="true" data-label-id="0"></i>
                 hotro@b-boy.com</a>
             </div>
-            <div class="col-12 phone-header" style="font-weight: bold;">
+            <div class="phone-header" style="font-weight: bold;">
               <a href="tel:+8490454656" style="color: #497697;">
                 <i class="fas fa-phone-alt mr-1" aria-hidden="true" data-selected="true" data-label-id="0"></i>
                 090454656</a>

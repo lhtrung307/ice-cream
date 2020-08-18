@@ -34,12 +34,12 @@ function setNavigation() {
 }
 
 // .carousel-indicators
-$(document).ready(function () {
+$(document).ready(function ($) {
   const listCarousel = [
     "#multi-item-all",
     "#multi-item-profile",
     "#multi-item-drink",
-    "#multi-item-other",
+    "#multi-item-other"
   ];
   listCarousel.forEach((item) => {
     $(item)
@@ -54,5 +54,17 @@ $(document).ready(function () {
           "active"
         );
       });
+  });
+
+  $(".drop-menu").click(function () {
+    $(".drop-menu-mobile").slideToggle();
+  });
+
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 0) {
+      $(".header-sticky").addClass("on-stick");
+    } else {
+      $(".header-sticky").removeClass("on-stick");
+    }
   });
 });
